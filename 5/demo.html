@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+
+<body>
+	<script src="startUp.js"></script>
+	<script>
+		// 配置
+		startUp.config({
+			alias: {
+				a: 'common/a',
+				b: 'common/b'
+			},
+			preload: [] // 预加载
+		})
+		startUp.use(["a", "b"], function (a, b) {
+			console.log(a);
+			console.log(b);
+			console.log("startUp...");
+		});
+	</script>
+</body>
+
+</html>
